@@ -1,0 +1,16 @@
+---
+galaxy_info:
+  author: Rui Ribeiro
+  description: Nvidia Driver Install
+  company: MACC
+  license: MIT
+  min_ansible_version: 2.9
+  platforms:
+    - name: CentOS
+      versions:
+        - all
+  galaxy_tags:
+    - drivers
+    - nvidia
+dependencies:
+    - macc.yum-repositories

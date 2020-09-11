@@ -1,0 +1,14 @@
+---
+- hosts: localhost
+  remote_user: root
+  vars:
+    yum_repositories_pkgs:
+      - {
+        name: cuda-rhel7-x86_64,
+        description: Nvidia CUDA Drivers,
+        baseurl: https://developer.download.nvidia.com/compute/cuda/repos/rhel7/x86_64,
+        gpgkey: https://developer.download.nvidia.com/compute/cuda/repos/rhel7/x86_64/7fa2af80.pub
+      }
+  roles:
+    - yum-repositories
+    - nvidia-cuda

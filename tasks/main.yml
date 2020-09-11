@@ -1,0 +1,8 @@
+---
+# tasks file for nvidia-cuda
+
+- name: install nvidia packages
+  package:
+    name:
+      - nvidia-driver-latest-dkms
+  tags: nvidia

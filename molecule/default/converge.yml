@@ -1,0 +1,15 @@
+---
+- name: Converge
+  hosts: all
+  vars:
+    yum_repositories_urls:
+      - {
+        name: cuda-rhel7-x86_64,
+        description: Nvidia CUDA Drivers,
+        url: https://developer.download.nvidia.com/compute/cuda/repos/rhel7/x86_64,
+        gpgkey: https://developer.download.nvidia.com/compute/cuda/repos/rhel7/x86_64/7fa2af80.pub
+      }
+  tasks:
+    - name: "Include nvidia-driver"
+      include_role:
+        name: "nvidia-driver"
